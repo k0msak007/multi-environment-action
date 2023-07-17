@@ -25,6 +25,7 @@ jobs:
       - name: Run a script
         run: |
           echo "I am running a job in a DEV environment"
+          echo "your secret token is ${{secrets.MY_SECRET}}"
   QA:
     runs-on: ubuntu-latest
     environment: QA
@@ -36,6 +37,7 @@ jobs:
       - name: Run a script
         run: |
           echo "I am running a job in a QA environment"
+          echo "your secret token is ${{secrets.MY_SECRET}}"
           
   PROD:
     runs-on: ubuntu-latest
@@ -48,5 +50,6 @@ jobs:
       - name: Run a script
         run: |
           echo "I am running a job in a PROD environment"
+          echo "your secret token is ${{secrets.MY_SECRET}}"
           
   
